@@ -1,0 +1,349 @@
+﻿
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>2018年成人学历考试预报名系统</title>
+    <script src="js/jquery.min_7.js"></script>
+    <link rel="stylesheet" href="css/cxcalendar_7.css" type="text/css" />
+    <link type="text/css" href="css/cssxyf_7.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/message_7.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var url = this.location.href;
+            $("form #field3").each(function (n) {
+                $("form #field3").get(n).value = url;
+            })
+        })
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            //倒计时js开始
+            var mydate = new Date();
+            $(".month").html(mydate.getMonth() + 1)
+            $(".day").html(mydate.getDate())
+
+        });
+    </script>
+
+    <script type="text/javascript" src="js/timexyf_7.js"></script>
+    <script type="text/javascript" src="js/maydate_7.js" ></script>
+    <script type="text/javascript" src="js/calendar_7.js"></script>
+
+</head>
+
+<body>
+    <div class="topp"><img src="picture/topbl_7.jpg" /></div>
+
+    <div class="dh">
+        <div class="dh1">
+            <ul>
+                <li class="p4"><a>申请须知</a></li>
+                <li class="p1" style="background:#545454"><a>学籍补录系统</a></li>
+            </ul>
+            <span><a href="index.html">[返回主菜单]</a></span>
+        </div>
+    </div>
+    <div class="page1">
+        <div class="shijian">
+            <div id="showtime"></div>
+        </div>
+        <h1>提醒：本批次报名即将截止，内部学籍通道即将<!--将于<span style="font-weight:bold;"><span class="month"></span>月<span class="day"></span>日</span><span style=" color:red;">23:59 </span>-->关闭！！！</h1>
+        <form name="messageForm" method="post" action="/message.action" id="messageForm1">
+            <table width="980" border="0" bgcolor="#666666" cellpadding="0" cellspacing="1" style="line-height:40px; margin:0 auto;">
+                <input type="hidden" value="注册成功" name="msg.name" class="enterinput" id="name" />
+                <input type="hidden" name="msg.field1" class="enterinput" id="remark" value="徐玉峰" />
+                <input type="hidden" name="msg.remark" class="enterinput" id="remark" value="徐玉峰" />
+                <input type="hidden" value="" name="msg.email" id="email" />
+                <input type="hidden" value="广州分校" name="msg.school_code" id="schoolCode" />
+                <input type="hidden" value="自考" name="msg.project_code" />
+                <input type="hidden" value="自考" name="msg.message_type" />
+                <input type="hidden" name="msg.field2" id="field2" value="178" />
+                <input type="hidden" name="msg.field3" id="field3" value="" />
+                <input type="hidden" value="http://i.sunlands.com/portal-war/message.action" id="msgUrl" />
+                <tr>
+                    <td height="53" colspan="5" align="center" bgcolor="#313131">
+                        <p style="font-family:'微软雅黑'; font-size:24px; color:#fff; font-weight:bold;">补录名额查询</p>
+                        <!--<p style="font-family:'微软雅黑'; font-size:16px; color:#FF0; font-weight:bold;">填写报名信息</p>-->
+                    </td>
+                </tr>
+                <tr>
+                    <td width="104" align="center" bgcolor="#FFFFFF"><p>地区</p></td>
+                    <td width="232" align="center" bgcolor="#FFFFFF">
+                        <select style="background-color:#fff; width:140px; height:26px; line-height:26px;">
+                            <option>广东</option>
+                            <option>海南</option>
+                            <option>江苏</option>
+                            <option>新疆</option>
+                            <option>甘肃</option>
+                            <option>青海</option>
+                            <option>宁夏</option>
+                            <option>广西</option>
+                            <option>四川</option>
+                            <option>浙江</option>
+			                <option>重庆</option>
+                            <option>湖北</option>
+                            <option>湖南</option>
+                            <option>福建</option>
+                            <option>陕西</option>
+                            <option>上海</option>
+                            <option>云南</option>
+                            <option>贵州</option>
+                            <option>北京</option>
+                        </select>
+                    </td>
+                    <td width="215" align="center" bgcolor="#FFFFFF"><p>时间</p></td>
+                    <td width="254" align="center" bgcolor="#FFFFFF">
+                        <input name="mydate" type="text" class="input_cxcalendar" style="width:160px;height:20px;line-height:20px;" />
+                    </td>
+                    <td width="169" align="center" bgcolor="#FFFFFF"><p style="width:140px;height:30px;background:#ae000a;color:#fff;line-height:30px;cursor:pointer;">查询</p></td>
+                </tr>
+                <tr>
+                    <td align="center" bgcolor="#FFFFFF">&nbsp;</td>
+                    <td colspan="3" align="center" bgcolor="#FFFFFF">总名额：100<span style="font-weight:bold;color:red;"></span></td>
+                    <td align="center" bgcolor="#FFFFFF">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="center" bgcolor="#FFFFFF">&nbsp;</td>
+                    <td colspan="3" align="center" bgcolor="#FFFFFF" >已申请名额：<span id="a1">80</span></td>
+                    <td align="center" bgcolor="#FFFFFF">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="center" bgcolor="#FFFFFF">&nbsp;</td>
+                    <td colspan="3" align="center" bgcolor="#FFFFFF"> 剩余名额：<span style="color:red;" id="b1">20</span></td>
+                    <td align="center" bgcolor="#FFFFFF">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="5" align="center" bgcolor="#313131"><p style="color:#fff;font-size:24px;font-weight:bold;">2018年自学考试学籍补录申请表</p></td>
+                </tr>
+                <tr>
+                    <td align="center" bgcolor="#FFFFFF"><p><span style="color:red;">*</span>姓名</p></td>
+                    <td align="center" bgcolor="#FFFFFF"><input type="text" style="background-color:#fff;width:160px;height:20px; line-height:20px;" /></td>
+                    <td align="center" bgcolor="#FFFFFF"><p>性别</p></td>
+                    <td align="center" bgcolor="#FFFFFF">
+                        <select style="background-color:#fff; width:160px; height:26px; line-height:26px;">
+                            <option>男</option>
+                            <option>女</option>
+                        </select>
+                    </td>
+                    <td width="169" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="center" bgcolor="#FFFFFF"><p>证件类型</p></td>
+                    <td align="center" bgcolor="#FFFFFF">
+                        <select name="msg.field4" style="background-color:#fff; width:160px; height:26px; line-height:26px;">
+                            <option>居民身份证</option>
+                            <option>港澳台身份证</option>
+                            <option>华侨身份证（无身份证可填护照）</option>
+                            <option>其他</option>
+                        </select>
+                    </td>
+                    <td align="center" bgcolor="#FFFFFF"><p><span style="color:red;">*</span>身份证后四位</p></td>
+                    <td align="center" bgcolor="#FFFFFF"><input type="text" style="background-color:#fff;width:160px;height:20px; line-height:20px;" /></td>
+                    <td width="169" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td height="32" align="center" bgcolor="#FFFFFF"><span style="color:red;">*</span>手机号码</td>
+                    <td height="32" align="center" bgcolor="#FFFFFF"><input type="text" style="background-color:#fff;width:160px;height:20px; line-height:20px;" name="msg.phone" /></td>
+                    <td height="32" align="center" bgcolor="#FFFFFF">现阶段学历</td>
+                    <td height="32" align="center" bgcolor="#FFFFFF">
+                        <select name="msg.field5" style="background-color:#fff; width:160px; height:26px; line-height:26px;">
+                            <option>无</option>
+                            <option>初中</option>
+                            <option>高中</option>
+                            <option>中专</option>
+                            <option>大专</option>
+                            <option>本科</option>
+                            <option>其他</option>
+                        </select>
+                    </td>
+                    <td align="center" bgcolor="#FFFFFF">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="center" bgcolor="#FFFFFF"><p>地区</p></td>
+                    <td align="center" bgcolor="#FFFFFF">
+                        <select name="msg.field4" style="background-color:#fff; width:160px; height:26px; line-height:26px;">
+                             <option>江苏</option>
+                            <option>新疆</option>
+                            <option>甘肃</option>
+                            <option>青海</option>
+                            <option>宁夏</option>
+                            <option>广西</option>
+                            <option>四川</option>
+                            <option>浙江</option>
+			    <option>重庆</option>
+                            <option>湖北</option>
+                            <option>湖南</option>
+                            <option>福建</option>
+                            <option>陕西</option>
+			    <option>安徽</option>
+                            <option>云南</option>
+                            <option>贵州</option>
+                            <option>北京</option>
+                        </select>
+                    </td>
+                    <td align="center" bgcolor="#FFFFFF"><p>户口</p></td>
+                    <td align="center" bgcolor="#FFFFFF">
+                        <select style="background-color:#fff; width:160px; height:26px; line-height:26px;">
+                            <option>本地户口</option>
+                            <option>非本地户口</option>
+                        </select>
+                    </td>
+                    <td width="169" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="center" bgcolor="#FFFFFF"><p>学校</p></td>
+                    <td align="center" bgcolor="#FFFFFF">
+                        <input type="text" style="background-color:#fff;width:160px;height:20px; line-height:20px;"  placeholder="请输入学校名称"/>
+                    </td>
+                    <td align="center" bgcolor="#FFFFFF"><p>报考专业</p></td>
+                    <td align="center" bgcolor="#FFFFFF">
+                       <input type="text" style="background-color:#fff;width:160px;height:20px; line-height:20px;"  placeholder="请输入专业名称"/> 
+                    </td>
+                    <td width="169" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td height="40" colspan="5" align="center" bgcolor="#FFFFFF"><input style="width:140px;height:30px;background:#ae000a;color:#fff;line-height:30px;cursor:pointer;outline:none;border:0;text-align:center;" onclick="tuiguang_message_open('messageForm1',callback,142,35)" value="立即注册" type="button" /> </td>
+                </tr>
+                <tr>
+                  <td align="center" bgcolor="#FFFFFF">&nbsp;</td>
+                  <td colspan="4" align="left" bgcolor="#FFFFFF"><p style="line-height:22px;padding-top:10px;">&nbsp;注：1、报考信息统一录入引路者系统，考前指导学员报名</p>
+                      <p style="line-height:22px;padding-bottom:10px;">&nbsp;&nbsp;&nbsp;2、提交之前务必确认学员报考信息正确，以免错报误报。</p></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div class="bkqr page4">
+        <div class="shuoming2">
+            <p style="font-family:'微软雅黑'; font-size:24px; color:#000; line-height:40px; font-weight:bold; text-align:center;">2018年上学籍补录提前须知</p>
+            <p style="font-family:'微软雅黑'; font-size:24px; color:#000; font-weight:bold;"><hr /></p>
+            <p>日前，教育部下达了关于全国高校学籍管理系统学生信息的补录工作的通知,凡是在上一次在第一次招生的时候因为填报人数少而导致招生人数未满的学校，都可以进行第二次补录。</p>
+            <p>引路者机构作为官方授权的教育服务机构，拥有11
+
+年的自考培训经验，已帮助30万学员完成梦想，每年的自考通过率高达95%。为了帮助引路者机构高等教育自学考试（以下简称自考）学员更好的获得补录资格，顺利参加考试，引路者机构特此开通自考报名补录通道。具体要求如下：</p>
+            <p>一、 适用范围：</p>
+             <p>1. 正在参加引路者机构自考各专业培训课程，且在8月29日报考截止前没报上名的学员；<br />&nbsp;&nbsp;2. 已经报名引路者机构自考各专业培训课程，且在8月29日报考截止前没报上名的学员；</p>
+            <p>二、 补录名额及截止日期：</p>
+            <p>1. 引路者机构各地区补录名额为100个。<br />&nbsp;&nbsp;2. 补录时间为2018年6月7日9：00-6月15日23：59。</p>
+        </div>
+    </div>
+    <div class="tc" style="background-color:#62c4e9;">
+        <h3>温馨提示：</h3>
+         <p>您好，恭喜您注册成功！不可重复注册，请您于2018年<span class="curMonth"></span>月<span class="curDate"></span>日21：00之前保持电话畅通。</p>
+        <span class="confirm">确认</span>
+        <span class="close">X</span>
+    </div>
+    <div style="position:fixed;bottom:20px;left:10px;" >
+    	<a onclick="show1()" style=" cursor:pointer; display:block; background:#ff9d10; color:#FFF; font-size:16px; width:120px; height:42px; line-height:42px; text-align:center; border-radius:3px; z-index:9; font-family:'Microsoft Yahei';" >点击变换名额</a>
+    </div>
+    <script type="text/javascript">
+		function show1() {
+			var a1 = parseInt($("#a1").html());
+		   // alert(a1);
+			if (a1 < 100) {
+				$("#a1").html(a1+1);
+			} else {
+				alert("不可以大于100，请刷新页面");
+			}
+			$("#b1").html(99 - a1);
+		}
+    </script>
+    <script>
+        $(".tc span").click(function () {
+            $(".tc").css("display", "none");
+        });
+        $(".p1").click(function () {
+
+            $(".page1").css("display", "block");
+
+            $(".page2").css("display", "none");
+
+            $(".page3").css("display", "none");
+
+            $(".page4").css("display", "none");
+            $(".p1").css("background", "#545454");
+            $(".p2").css("background", "#222");
+            $(".p4").css("background", "#222");
+            $(".p3").css("background", "#222");
+
+        });
+        $(".p2").click(function () {
+
+            $(".page2").css("display", "block");
+
+            $(".page1").css("display", "none");
+
+            $(".page3").css("display", "none");
+
+            $(".page4").css("display", "none");
+            $(".p2").css("background", "#545454");
+            $(".p1").css("background", "#222");
+            $(".p4").css("background", "#222");
+            $(".p3").css("background", "#222");
+        });
+        $(".p3").click(function () {
+
+            $(".page3").css("display", "block");
+
+            $(".page2").css("display", "none");
+
+            $(".page1").css("display", "none");
+
+            $(".page4").css("display", "none");
+            $(".p3").css("background", "#545454");
+            $(".p1").css("background", "#222");
+            $(".p2").css("background", "#222");
+            $(".p4").css("background", "#222");
+        });
+        $(".p4").click(function () {
+
+            $(".page4").css("display", "block");
+
+            $(".page1").css("display", "none");
+
+            $(".page2").css("display", "none");
+
+            $(".page3").css("display", "none");
+            $(".p4").css("background", "#545454");
+            $(".p1").css("background", "#222");
+            $(".p2").css("background", "#222");
+            $(".p3").css("background", "#222");
+        });
+
+
+
+    </script>
+    <script>
+    $('.input_cxcalendar').each(function () {
+        var a = new Calendar({
+            targetCls: $(this),
+            type: 'yyyy-mm-dd HH:MM',
+            wday: 7
+        }, function (val) {
+            console.log(val);
+        });
+    });
+    </script>　
+    <script type="text/javascript">
+        function callback(msg) {
+            // alert("您好，恭喜您申请成功！您的受理号码为JS1605，请您于2018年06月23日21：00之前到达分校完成现场确认。");
+            $(".tc").css("display", "block");
+            //追加短信,可以删除掉,如果要追加留言必须带上参数:&callback="+回调函数如:testBack可以为别的随便名称,但必须跟下面的名称一样
+            $.ajax({
+                url: encodeURI(encodeURI("http://w.sunlands.com/tuiguang/ajax_tuiguang_message.htm?tel=" + msg.phone + "&name=" + msg.name
+                + "&messageId=" + msg.messageId + "&schoolId=" + msg.schoolId + "&callback=" + testBack)),
+                type: "get",
+                dataType: "jsonp",
+                jsonp: testBack,//回调函名称必须有,和参数&callback="的值一样的
+                success: function (data) { }
+            });
+        }
+        //和追加留言一起的回调函数,和参数&callback="的值一样的
+        function testBack(msg) {
+            //可以为空
+        }
+    </script>
+
+
+</body>
+</html>

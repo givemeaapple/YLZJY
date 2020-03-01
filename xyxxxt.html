@@ -1,0 +1,388 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>2018年成人学历考试预报名系统</title>
+<script src="js/jquery.min_7.js"></script> 
+    <link rel="stylesheet" href="css/cxcalendar_7.css" type="text/css" />
+    <link type="text/css" href="css/cssxyf_7.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/message_7.js"></script>
+    <script type="text/javascript" src="js/maydate_7.js" ></script>
+    <script type="text/javascript">
+        $(function () {
+            var url = this.location.href;
+            $("form #field3").each(function (n) {
+                $("form #field3").get(n).value = url;
+            })
+        })
+    </script>
+    <script type="text/javascript">
+    $(function () {
+        //倒计时js开始
+        var mydate = new Date();
+        $(".month").html(mydate.getMonth() + 1)
+        $(".day").html(mydate.getDate())
+
+    });
+    </script>
+
+<script type="text/javascript" src="js/timexyf_7.js"></script>
+    <script type="text/javascript" src="js/calendar_7.js"></script>
+</head>
+
+<body>
+<div class="topp"><img src="picture/topxx.jpg" /></div>
+
+<div class="dh">
+	<div class="dh1">
+    <!--<ul>
+    <li class="p4"><a >申请须知</a></li>
+    <li class="p1" style="background:#545454"><a>分期申请系统</a></li>
+    </ul>-->
+    	<h1 style=" color:#fff; text-align:center; line-height:50px; font-size:18px;">引路者机构学员学历查询唯一系统，仅供引路者机构内部员工查询</h1>
+        <span><a href="index.html">[返回主菜单]</a></span>
+    </div>
+</div>
+<div class="page1">
+<!--<div class="shijian">
+<div id="showtime"></div>-->
+</div>
+<!--<h1 >提醒：本批次报名即将截止，内部学籍通道将于<span style="font-weight:bold;"><span class="month"></span>月<span class="day"></span>日</span><span style=" color:red;">23:59 </span>关闭！！！</h1>-->
+         <form name="messageForm" method="post" action="/message.action" id="messageForm1">
+        <table width="980" border="0" bgcolor="#666666" cellpadding="0" cellspacing="1" style="line-height:40px; margin:0 auto;">
+
+            <input type="hidden" value="注册成功" name="msg.name" class="enterinput" id="name" />
+            <input type="hidden" name="msg.field1" class="enterinput" id="remark" value="徐玉峰" />
+            <input type="hidden" name="msg.remark" class="enterinput" id="remark" value="徐玉峰" />
+            <input type="hidden" value="" name="msg.email" id="email" />
+            <input type="hidden" value="广州分校" name="msg.school_code" id="schoolCode" />
+            <input type="hidden" value="自考" name="msg.project_code" />
+            <input type="hidden" value="自考" name="msg.message_type" />
+            <input type="hidden" name="msg.field2" id="field2" value="178" />
+            <input type="hidden" name="msg.field3" id="field3" value="" />
+            <input type="hidden" value="http://i.sunlands.com/portal-war/message.action" id="msgUrl" />
+            <tr>
+                <td height="40" colspan="15" align="center" bgcolor="#313131"><p style="font-family:'微软雅黑'; font-size:24px; color:#fff; font-weight:bold;">学员信息查询</p>   
+                   <!--<p style="font-family:'微软雅黑'; font-size:16px; color:#FF0; font-weight:bold;">填写报名信息</p>-->
+                </td>
+            </tr>
+            <tr>
+                <td width="153" align="center" bgcolor="#FFFFFF"><p>地区</p></td>
+                <td width="194" align="center" bgcolor="#FFFFFF">
+                <select style="background-color:#fff; width:140px; height:26px; line-height:26px;">
+                     		<option>广东</option>
+                            <option>海南</option>
+                            <option>江苏</option>
+                            <option>新疆</option>
+                            <option>甘肃</option>
+                            <option>青海</option>
+                            <option>宁夏</option>
+                            <option>广西</option>
+                            <option>四川</option>
+                            <option>浙江</option>
+                            <option>重庆</option>
+                            <option>湖北</option>
+                            <option>湖南</option>
+                            <option>福建</option>
+                            <option>陕西</option>
+                            <option>安徽</option>
+                            <option>云南</option>
+                            <option>贵州</option>
+                            <option>北京</option>
+                 </select>
+                 </td>
+                <td width="153" align="center" bgcolor="#FFFFFF"><p>时间</p></td>
+                <td width="194" align="center" bgcolor="#FFFFFF">
+                   <select style="background-color:#fff; width:140px; height:26px; line-height:26px;">
+                    <option>2017年4月</option>
+                    <option>2017年10月</option>
+                    <option>2017年7月</option>
+                    <option>2017年4月</option>
+                    <option>2017年1月</option>
+                    <option>2016年10月</option>
+                    <option>2016年7月</option>
+                    <option>2016年4月</option>
+                    <option>2016年1月</option>
+                    <option>2015年10月</option>
+                    <option>2015年7月</option>
+                    <option>2015年4月</option>
+                    <option>2015年1月</option>
+                    <option>2014年10月</option>
+                    <option>2014年7月</option>
+                    <option>2014年4月</option>
+                    <option>2014年1月</option>
+                 </select>
+                </td>
+                <td width="169" align="center" bgcolor="#FFFFFF"><p style="width:140px;height:30px;background:#ae000a;color:#fff;line-height:30px;cursor:pointer;">查询</p></td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#FFFFFF">考试人数</td>
+              <td  align="center" bgcolor="#FFFFFF">3125</td>
+              <td align="center" bgcolor="#FFFFFF">就业率</td>
+              <td align="center" bgcolor="#FFFFFF"><span style="font-weight:bold;color:red;">87.3%</span></td>
+              <td align="center" bgcolor="#FFFFFF">&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#FFFFFF">通过人数</td>
+              <td align="center" bgcolor="#FFFFFF">2906</td>
+              <td align="center" bgcolor="#FFFFFF">500强offer数</td>
+              <td align="center" bgcolor="#FFFFFF">200</td>
+              <td align="center" bgcolor="#FFFFFF">&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#FFFFFF">通过率</td>
+              <td align="center" bgcolor="#FFFFFF"><span style="font-weight:bold;color:red;">92.99%</span></td>
+              <td align="center" bgcolor="#FFFFFF">就业满意度</td>
+              <td align="center" bgcolor="#FFFFFF">80.21%</td>
+              <td align="center" bgcolor="#FFFFFF">&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#FFFFFF">专科毕业人数</td>
+              <td align="center" bgcolor="#FFFFFF">1056</td>
+              <td align="center" bgcolor="#FFFFFF">本科毕业人数</td>
+              <td align="center" bgcolor="#FFFFFF">1850</td>
+              <td align="center" bgcolor="#FFFFFF">&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#FFFFFF">专科就业0ffer总数</td>
+              <td align="center" bgcolor="#FFFFFF">1945</td>
+              <td align="center" bgcolor="#FFFFFF">本科就业offer总数</td>
+              <td align="center" bgcolor="#FFFFFF">5066</td>
+              <td align="center" bgcolor="#FFFFFF">&nbsp;</td>
+            </tr>
+            </table>
+            <table width="980" border="0" bgcolor="#666666" cellpadding="0" cellspacing="1" style="line-height:40px; margin:0 auto;">
+            <tr>
+              <td height="40" colspan="20" align="center" bgcolor="#313131"><span style="color:#fff;font-size:24px;font-weight:bold; width:100%;">学员信息总览</span></td>
+            </tr>
+            <tr>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">学员姓名</td>
+              <td height="40" align="center" bgcolor="#FFFFFF">报考专业</td>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">手机号</td>
+              <td height="40" colspan="3" align="center" bgcolor="#FFFFFF">身份证后四位</td>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">学习状态</td>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">是否毕业</td>
+              <td height="40" colspan="3" align="center" bgcolor="#FFFFFF">获得证书</td>
+              <td width="128" height="40" colspan="1" align="center" bgcolor="#FFFFFF">offer数</td>
+            </tr>
+            <tr>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">聂剑平</td>
+              <td height="40" align="center" bgcolor="#FFFFFF">行政管理</td>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">155****0920</td>
+              <td height="40" colspan="3" align="center" bgcolor="#FFFFFF">**************727X</td>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">完成</td>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">是</td>
+              <td height="40" colspan="3" align="center" bgcolor="#FFFFFF">专科毕业证</td>
+              <td height="40" colspan="1" align="center" bgcolor="#FFFFFF" style="color:red;">3</td>
+            </tr>
+            <tr>
+             <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">胡成祥</td>
+              <td height="40" align="center" bgcolor="#FFFFFF">工商企业管理</td>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">155****8887</td>
+              <td height="40" colspan="3" align="center" bgcolor="#FFFFFF">**************5012</td>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">完成</td>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">是</td>
+              <td height="40" colspan="3" align="center" bgcolor="#FFFFFF">本科毕业证、本科学位证</td>
+              <td height="40" colspan="1" align="center" bgcolor="#FFFFFF" style="color:red;">4</td>
+            </tr>
+            <tr>
+             <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">王汇杉</td>
+              <td height="40" align="center" bgcolor="#FFFFFF">行政管理</td>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">131****7700</td>
+              <td height="40" colspan="3" align="center" bgcolor="#FFFFFF">**************2598</td>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">完成</td>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">是</td>
+              <td height="40" colspan="3" align="center" bgcolor="#FFFFFF">专科毕业证</td>
+              <td height="40" colspan="1" align="center" bgcolor="#FFFFFF">1</td>
+            </tr>
+            <tr>
+             <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">刘伟</td>
+              <td height="40" align="center" bgcolor="#FFFFFF">工商企业管理</td>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">131****2288</td>
+              <td height="40" colspan="3" align="center" bgcolor="#FFFFFF">**************6575</td>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">完成</td>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">是</td>
+              <td height="40" colspan="3" align="center" bgcolor="#FFFFFF">专科毕业证</td>
+              <td height="40" colspan="1" align="center" bgcolor="#FFFFFF" style="color:red;">4</td>
+            </tr>
+            <tr>
+             <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">李征</td>
+              <td height="40" align="center" bgcolor="#FFFFFF">汉语言</td>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">188****8501</td>
+              <td height="40" colspan="3" align="center" bgcolor="#FFFFFF">**************2512</td>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">完成</td>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">是</td>
+              <td height="40" colspan="3" align="center" bgcolor="#FFFFFF">专科毕业证</td>
+              <td height="40" colspan="1" align="center" bgcolor="#FFFFFF">2</td>
+            </tr>
+            <tr>
+             <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">闫宇</td>
+              <td height="40" align="center" bgcolor="#FFFFFF">行政管理</td>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">188****3847</td>
+              <td height="40" colspan="3" align="center" bgcolor="#FFFFFF">**************8137</td>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">完成</td>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">是</td>
+              <td height="40" colspan="3" align="center" bgcolor="#FFFFFF">本科毕业证、本科学位证</td>
+              <td height="40" colspan="1" align="center" bgcolor="#FFFFFF" style="color:red;">5</td>
+            </tr>
+            <tr>
+             <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">程俊</td>
+              <td height="40" align="center" bgcolor="#FFFFFF">工商企业管理</td>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">156****9760</td>
+              <td height="40" colspan="3" align="center" bgcolor="#FFFFFF">**************311X</td>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">完成</td>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">是</td>
+              <td height="40" colspan="3" align="center" bgcolor="#FFFFFF">本科毕业证、本科学位证</td>
+              <td height="40" colspan="1" align="center" bgcolor="#FFFFFF" style="color:red;">4</td>
+            </tr>
+            <tr>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">何伟</td>
+              <td height="40" align="center" bgcolor="#FFFFFF">英语</td>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">157****9124</td>
+              <td height="40" colspan="3" align="center" bgcolor="#FFFFFF">**************727X</td>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">完成</td>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">是</td>
+              <td height="40" colspan="3" align="center" bgcolor="#FFFFFF">专科毕业证</td>
+              <td height="40" colspan="1" align="center" bgcolor="#FFFFFF">2</td>
+            </tr>
+            <tr>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">江良</td>
+              <td height="40" align="center" bgcolor="#FFFFFF">商务管理</td>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">153****9717</td>
+              <td height="40" colspan="3" align="center" bgcolor="#FFFFFF">**************2598</td>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">完成</td>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">是</td>
+              <td height="40" colspan="3" align="center" bgcolor="#FFFFFF">专科毕业证</td>
+              <td height="40" colspan="1" align="center" bgcolor="#FFFFFF" style="color:red;">3</td>
+            </tr>
+            <tr>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">霍远秦</td>
+              <td height="40" align="center" bgcolor="#FFFFFF">行政管理</td>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">189****3251</td>
+              <td height="40" colspan="3" align="center" bgcolor="#FFFFFF">**************5012</td>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">完成</td>
+              <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">是</td>
+              <td height="40" colspan="3" align="center" bgcolor="#FFFFFF">本科毕业证、本科学位证</td>
+              <td height="40" colspan="1" align="center" bgcolor="#FFFFFF" style="color:red;">3</td>
+            </tr>
+              <td height="40" colspan="20" align="center" bgcolor="#FFFFFF"><span style="width:140px;height:30px;line-height:30px;background:#484848;color:#fff;padding:3px 6px;cursor:pointer;">上一页</span> 第1页/共313页 <span style="width:140px;height:30px;line-height:30px;background:#9e9e9e;color:#fff;padding:3px 6px;cursor:pointer;">下一页</span></td>
+            </tr>
+        </table>
+    </form>
+</div>
+<div class="bkqr page4">
+<div class="shuoming2">
+  <p style="font-family:'微软雅黑'; font-size:24px; color:#000; line-height:40px; font-weight:bold; text-align:center;">引路者机构分期项目</p>
+  <p style="font-family:'微软雅黑'; font-size:24px; color:#000; font-weight:bold;"><hr /></p>
+    <p>引路者机构作为官方授权的教育服务机构，拥有9年的自考经验，已帮助30万学员完成梦想，每年的自考通过率高达95%。为帮助经济贫困学生解决学习上的经济负担，引路者机构特与8大银行签署了长期合作协议，凡是参加引路者机构自考课程的学员都可以进行0首付0利息的分期服务，利息一力由引路者机构承担，最大程度上为学员提供一个无忧无虑的学习机会。</p>
+    <p>具体要求如下：</p>
+    <p >1、学费分期为12个月，0首付0利息。<br />&nbsp;&nbsp;2、每个地区每月分期名额为100名。</p>
+<p > </p>
+</div>
+</div>
+    <div class="tc" style="background-color:#62c4e9;">
+        <h3>温馨提示：</h3>
+           <p>您好，恭喜您注册成功！不可重复注册，请您于2019年<span class="curMonth"></span>月<span class="curDate"></span>日21：00之前保持电话畅通。</p>
+        <span class="confirm">确认</span>
+        <span class="close">X</span>
+    </div>
+    <script>
+        $(".tc span").click(function () {
+            $(".tc").css("display", "none");
+        });
+        $(".p1").click(function () {
+
+            $(".page1").css("display", "block");
+
+            $(".page2").css("display", "none");
+
+            $(".page3").css("display", "none");
+
+            $(".page4").css("display", "none");
+            $(".p1").css("background", "#545454");
+            $(".p2").css("background", "#222");
+            $(".p4").css("background", "#222");
+            $(".p3").css("background", "#222");
+
+        });
+        $(".p2").click(function () {
+
+            $(".page2").css("display", "block");
+
+            $(".page1").css("display", "none");
+
+            $(".page3").css("display", "none");
+
+            $(".page4").css("display", "none");
+            $(".p2").css("background", "#545454");
+            $(".p1").css("background", "#222");
+            $(".p4").css("background", "#222");
+            $(".p3").css("background", "#222");
+        });
+        $(".p3").click(function () {
+
+            $(".page3").css("display", "block");
+
+            $(".page2").css("display", "none");
+
+            $(".page1").css("display", "none");
+
+            $(".page4").css("display", "none");
+            $(".p3").css("background", "#545454");
+            $(".p1").css("background", "#222");
+            $(".p2").css("background", "#222");
+            $(".p4").css("background", "#222");
+        });
+        $(".p4").click(function () {
+
+            $(".page4").css("display", "block");
+
+            $(".page1").css("display", "none");
+
+            $(".page2").css("display", "none");
+
+            $(".page3").css("display", "none");
+            $(".p4").css("background", "#545454");
+            $(".p1").css("background", "#222");
+            $(".p2").css("background", "#222");
+            $(".p3").css("background", "#222");
+        });
+
+
+
+    </script> 
+    <script>
+    $('.input_cxcalendar').each(function () {
+        var a = new Calendar({
+            targetCls: $(this),
+            type: 'yyyy-mm-dd HH:MM',
+            wday: 7
+        }, function (val) {
+            console.log(val);
+        });
+    });
+    </script>　
+    <script type="text/javascript">
+    function callback(msg) {
+        //alert("您好，恭喜您申请成功！您的受理号码为JS1605，请您于2019年08月23日21：00之前到达分校完成现场确认。");
+        $(".tc").css("display", "block");
+        //追加短信,可以删除掉,如果要追加留言必须带上参数:&callback="+回调函数如:testBack可以为别的随便名称,但必须跟下面的名称一样
+        $.ajax({
+            url: encodeURI(encodeURI("http://w.sunlands.com/tuiguang/ajax_tuiguang_message.htm?tel=" + msg.phone + "&name=" + msg.name
+            + "&messageId=" + msg.messageId + "&schoolId=" + msg.schoolId + "&callback=" + testBack)),
+            type: "get",
+            dataType: "jsonp",
+            jsonp: testBack,//回调函名称必须有,和参数&callback="的值一样的
+            success: function (data) { }
+        });
+    }
+    //和追加留言一起的回调函数,和参数&callback="的值一样的
+    function testBack(msg) {
+        //可以为空
+    }
+    </script>
+
+
+</body>
+</html>
